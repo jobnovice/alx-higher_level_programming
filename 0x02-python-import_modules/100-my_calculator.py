@@ -10,11 +10,13 @@ if __name__ == "__main__":
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
         else:
+            x=int(sys.argv[1])
+            y=int(sys.argv[2])
             if (str(sys.argv[2]) == "+"):
-                print(f"{argv[1]} + {argv[3]} = {add(int(sys.argv[1]), int(sys.argv[2]))}")
+                print(f"{sys.argv[1]} + {sys.argv[3]} = {add(x, y)}")
             elif (str(sys.argv[2]) == "-"):
-                print(f"{argv[1]} + {argv[3]} = {sub(int(sys.argv[1]), int(sys.argv[2]))}")
+                print(f"{sys.argv[1]} + {sys.argv[3]} = {sub(x, y)}")
             elif (str(sys.argv[2]) == "*"):
-                print(f"{argv[1]} + {argv[3]} = {mul(int(sys.argv[1]), int(sys.argv[2]))}")
+                print(f"{sys.argv[1]} + {sys.argv[3]} = {mul(x, y)}")
             else:
-                print(f"{argv[1]} + {argv[3]} = {div(int(sys.argv[1]), int(sys.argv[2]))}")
+                print(f"{sys.argv[1]} + {sys.argv[3]} = {div(x, y)}")
