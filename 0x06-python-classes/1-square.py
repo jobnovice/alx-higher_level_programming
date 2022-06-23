@@ -3,7 +3,7 @@
 
 """ created the class sqaure with one parametes
     Args:
-        size:the description of the size    
+        size:the description of the size
 """
 
 
