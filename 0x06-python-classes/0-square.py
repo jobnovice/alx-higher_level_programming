@@ -1,6 +1,4 @@
 #!/usr/bin/python3
+''' defined a square '''
 class Square:
-    """defined a square """
-    def __init__(self):
-        """ construcor """
-        pass
+    pass
