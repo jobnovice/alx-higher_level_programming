@@ -15,19 +15,22 @@ class square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    @property 
+
+    @property
     def size(self):
         ''' do we need to documment this or should i leave it like that
             Return the deafult size
         '''
         return self.__size
+
     @size.setter
     def size(self, value):
-        ''' yeah man 
+        '''yeah man
             Args:
                 value (int): the value to change the size of square with
         '''
         self.__size = value
+
     def area(self):
         '''Return the area of the square'''
         return (self.__size * self.__size)
