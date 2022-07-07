@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Class square defined it"""
+"""a Class square defined in this python file ."""
 
 
 class square:
-    """class square that contains some methods and also setter and getters."""
+    """class square that contains some methods and also setter and getters.
+        Attributes:
+            __size (int): a private instance variable
+    """
 
     def __init__(self, size=0):
         """ well constructor
             Args:
-                size (int): well it's an int
+                size (int): the size of the square.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -25,7 +28,7 @@ class square:
 
     @size.setter
     def size(self, value):
-        """yeah man
+        """the function to set the new size of the square
             Args:
                 value (int): the value to change the size of square with
         """
