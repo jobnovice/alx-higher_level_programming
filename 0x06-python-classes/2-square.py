@@ -11,8 +11,10 @@ class Square:
         Args:
             size: nothing but a number
         """
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        elif type(size) is not int:
+        if type(size) is not int:
             raise TypeError("size must be an integer")
-        self.__size = size
+        else:
+            if size < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = size
