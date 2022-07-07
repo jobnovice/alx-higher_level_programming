@@ -10,8 +10,8 @@ class square:
 
     def __init__(self, size=0):
         """ well constructor
-            Args:
-                size (int): the size of the square.
+        Args:
+            size (int): the size of the square.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -22,7 +22,7 @@ class square:
     @property
     def size(self):
         """ do we need to documment this or should i leave it like that
-            Return the deafult size
+        Returns: the deafult size
         """
         return self.__size
 
@@ -35,5 +35,5 @@ class square:
         self.__size = value
 
     def area(self):
-        """Return the area of the square"""
+        """Returns: the area of the square"""
         return (self.__size * self.__size)
