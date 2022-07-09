@@ -1,39 +1,55 @@
 #!/usr/bin/python3
-"""a Class square defined in this python file ."""
+"""Defines a class Square"""
 
 
-class square:
-    """class square that contains some methods and also setter and getters.
-        Attributes:
-            __size (int): a private instance variable
+class Square:
+    """Represents a square
+
+    Attributes:
+        __size (int): size of a side of the square
     """
-
     def __init__(self, size=0):
-        """ well constructor
+        """initializes the square
+
         Args:
-            size (int): the size of the square.
+            size (int): size of a side of the square
+
+        Returns:
+            None
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+        self.size = size
+
+    def area(self):
+        """calculates the square's area
+
+        Returns:
+            The area of the square
+        """
+        return (self.__size) ** 2
 
     @property
     def size(self):
-        """ do we need to documment this or should i leave it like that
-        Returns: the deafult size
+        """getter of __size
+
+        Returns:
+            The size of the square
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """the function to set the new size of the square
-            Args:
-                value (int): the value to change the size of square with
-        """
-        self.__size = value
+        """setter of __size
 
-    def area(self):
-        """Returns: the area of the square"""
-        return (self.__size * self.__size)
+        Args:
+            value (int): the size of a size of the square
+
+        Returns:
+            None
+        """
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        else:
+            if value < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = value
