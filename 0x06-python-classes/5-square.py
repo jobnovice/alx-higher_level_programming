@@ -60,10 +60,11 @@ class Square:
             Returns:
                 none
         '''
+        f = self.__size
         if self.__size is 0:
             print()
         else:
-            for i in self.__size:
-                for i in self.__size:
-                    print("# ", end="".format(self.__size))
+            for i in f:
+                for i in f:
+                    print("# ", end="")
             print()
