@@ -13,22 +13,22 @@ class Node:
                 none'''
         self.__data = data
         self.__next_node = None
-    
+
     @property
     def data(self):
         ''' to retrieve the information
             Returns:
                 the data'''
         return self.__data
-    
+
     @data.setter
     def data(self, value):
-        ''' to set the value 
+        ''' to set the value
             Args:
                 value (int): to set the value in the data
             Returns:
                 None'''
-        if type (value) is not int:
+        if type(value) is not int:
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -44,10 +44,10 @@ class Node:
                 value (node):insert the next node
             Returns:
                 None'''
-        if type(value) is not Node or value != None:
+        if type(value) is not Node or value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
-    
+
     def __str__(self):
         """String representation of Node instance
         Returns:
@@ -55,15 +55,16 @@ class Node:
         """
         return str(self.__data)
 
+
 class SinglyLinkedList:
     ''' new class singly linked list defined'''
 
-    
     def __init__(self):
         '''intilalizes the node on the data itself
             Returns:
                 None'''
         self.__head = None
+
     def sorted_insert(self, value):
         """ inserts a new Node instance into the correct sorted position
         Args:

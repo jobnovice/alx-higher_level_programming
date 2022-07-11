@@ -2,9 +2,6 @@
 """Defines a class Square"""
 
 
-from turtle import position
-
-
 class Square:
     """Represents a square
 
@@ -58,11 +55,10 @@ class Square:
             else:
                 self.__size = value
 
-  
     @property
     def position(self):
-        '''getter of the position 
-            Returns:
+        '''getter of the positio
+        Returns:
                 the position of the size.'''
         return self.__position
 
@@ -74,6 +70,7 @@ class Square:
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
     def my_print(self):
         '''Prints the size of the squarein an
         array form
