@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""new class Rectangle defined now init"""
+"""new class defined Rectangle"""
 
 
-class Rectnagle:
-    """yeah again defined the new class rectangle i think we solved it
-    """
+class Rectangle:
+    """new class Rectangle defined but it's empty for now"""
     pass
