@@ -3,5 +3,5 @@
 
 
 class Rectnagle:
-    ''' yeah again this class contians nothing so far.'''
+    """ yeah again this class contians nothing so far."""
     pass
