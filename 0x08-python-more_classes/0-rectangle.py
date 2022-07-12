@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''ne class Rectangle defined.'''
+"""ne class Rectangle defined."""
 
 
 class Rectnagle:
