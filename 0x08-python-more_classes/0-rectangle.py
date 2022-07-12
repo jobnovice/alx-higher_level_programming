@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""ne class Rectangle defined."""
+"""defining new class Rectangle
+"""
 
 
 class Rectnagle:
-    """ yeah again this class contians nothing so far."""
+    """yeah again this class contians nothing so far nada."""
     pass
