@@ -4,5 +4,6 @@
 
 
 class Rectnagle:
-    """yeah again this class contians nothing so far nada."""
+    '''yeah again defined the new class rectangle i think we solved it
+    '''
     pass
