@@ -5,16 +5,17 @@
 class Rectangle:
     """new class Rectangle defined but it's empty for now"""
     def __init__(self, width=0, height=0):
-        """ yeah module is documented 
+        """ yeah module is documented
             Args:
                 width (int): the width of the rectangle
                 height (int): the height of the rectangle"""
         self.width = width
         self.height = height
+
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         '''to set the value of the heigh
@@ -24,11 +25,12 @@ class Rectangle:
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value   
+        self.__height = value
+
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         '''to set the value of the heigh
@@ -39,9 +41,11 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
     def area(self):
         '''returns the area of the rectangle'''
         return self.__height * self.__width
+
     def perimeter(self):
         '''returns the current perimeter of the rectangle'''
         if self.__height is 0 or self.__width is 0:
