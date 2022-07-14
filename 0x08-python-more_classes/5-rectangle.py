@@ -64,4 +64,4 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __delete__(self):
-        return "Bye rectangle..."
+        print( "Bye rectangle...")
