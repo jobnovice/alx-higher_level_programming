@@ -5,6 +5,7 @@
 class Rectangle:
     """new class Rectangle defined but it's empty for now"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ yeah module is documented
             Args:
