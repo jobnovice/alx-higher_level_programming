@@ -1,0 +1,2 @@
+#!/bin/bash
+pythno3 -m compileall $PYFILE
