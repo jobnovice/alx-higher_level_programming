@@ -19,7 +19,7 @@ if __name__ == "__main__":
             print("{} - {} = {}".format(a, b, (a - b)))
             exit(0)
         elif sys.argv[2] == '/':
-            print("{} / {} = {}".format(a, b, (a / b)))
+            print("{} / {} = {}".format(a, b, int(a / b)))
             exit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
