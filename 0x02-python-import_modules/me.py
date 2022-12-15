@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-import dis
-
-for i in range(4, 6):
-    print("me is right.")
-dis.dis(me)
+def prins():
+    for i in range(65, 91):
+        print(chr(i),end="")
+    return None
