@@ -13,4 +13,10 @@ if __name__ == '__main__':
     cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
     rows = cur.fetchall()
     for row in rows:
+
+D
+D
+C
+C
+C
         print(row)
