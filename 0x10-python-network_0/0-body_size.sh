@@ -1,3 +1,3 @@
 #!/bin/bash
-#a bash script that accepts a URL
-curl -sI "$1" | grep Content-Length | cut -d " " -f2
+# sends a request to a given url and prints the response body
+curl -sI $1 | grep Content-Length | cut -d " " -f2
