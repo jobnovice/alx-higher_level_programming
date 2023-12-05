@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""a script that takes a url as an argument and prints the response
- header"""
-import urllib.request
-import sys
-rs = urllib.request.Request(sys.argv[1])
-with urllib.request.urlopen(rs) as reponse:
-    print(reponse.headers['X-Request-Id'])
+"""Takes in a URL, sends a request to the URL and displays the value of the
+X-Request-Id variable found in the header of the response"""
+
+
+if __name__ == "__main__":
+    import urllib.request
+    import sys
+
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        head = response.headers.get('X-Request-Id')
+        print(head)
