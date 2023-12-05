@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# a python script that takes a url as an argument and prints a variable
+# a python script that takes a url as an argument
 import urllib.request
 import sys
 rs = urllib.request.Request(sys.argv[1])
