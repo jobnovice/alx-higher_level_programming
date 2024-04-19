@@ -13,7 +13,7 @@ const filepath = process.argv[2];
 // read the file synchronously
 const data = fs.readFileSync(filepath, 'utf-8');
 if (!data) {
-  console.error('Error: Unable to read file:', filepath);
+//   console.error('Error: Unable to read file:', filepath);
   process.exit(1);
 }
 
