@@ -8,6 +8,6 @@ if (process.argv.length !== 3) {
 
 const url = process.argv[2];
 request(url, function (error, response) {
-  console.error('error:', error);
+  console.error(error);
   console.log('code:', response.statusCode); // Print the response status code
 });
