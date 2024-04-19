@@ -8,7 +8,7 @@ if (process.argv.length < 3) {
 }
 
 // load the file from the argument
-const filepath = process.argv[2];
+const filepath = process.argv[1];
 
 // read the file asynchronously
 fs.readFileSync(filepath, 'utf-8', (err, data) => {
