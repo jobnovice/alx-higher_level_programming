@@ -7,6 +7,9 @@ if (process.argv.length !== 3) {
 }
 
 const url = process.argv[2];
-request(url, function (response) {
-  console.log('code:', response.statusCode); // Print the response status code
+request(url, function (err, response) {
+	if (err) {
+		process.exit(1);
+	}
+	console.log('code:', response.statusCode); // Print the response status code
 });
