@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 // check if the file is passed as an argument to our script
-if (process.argv.length < 3) {
+if (process.argv.length < 2) {
   console.error('Usage: 0-readme.js <filepath>');
   process.exit(1);
 }
