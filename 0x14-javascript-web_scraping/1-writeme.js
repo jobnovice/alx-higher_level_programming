@@ -11,4 +11,8 @@ if (process.argv.length !== 4) {
 const stringToWrite = process.argv[3];
 const filepath = process.argv[2];
 
-fs.writeFile(filepath, stringToWrite, 'utf-8', callback);
+fs.writeFile(filepath, stringToWrite, 'utf-8', (err) => {
+	if (err){
+		process.exit(1);
+	}
+});
