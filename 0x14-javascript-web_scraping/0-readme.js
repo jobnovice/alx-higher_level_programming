@@ -2,13 +2,13 @@
 const fs = require('fs');
 
 // check if the file is passed as an argument to our script
-if (process.argv.length < 2) {
+if (process.argv.length < 3) {
   console.error('Usage: 0-readme.js <filepath>');
   process.exit(1);
 }
 
 // load the file from the argument
-const filepath = process.argv[1];
+const filepath = process.argv[2];
 
 // read the file asynchronously
 fs.readFileSync(filepath, 'utf-8', (err, data) => {
