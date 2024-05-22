@@ -1,0 +1,6 @@
+# test for the sorted list program
+
+>>> from 1-my_list import MyList
+>>> my_list = Mylist([2, 4, 5, 3, 1])
+>>> my_list.sorted()
+[1, 2, 3, 4, 5]
