@@ -10,7 +10,7 @@ class MyList(list):
         print(sorted_list)
 
 
-# my_list = MyList([2, 4, 5, 6, 1])
+# my_list = MyList([2, 4, 5, 6, 1, -3])
 
 # print(my_list)
 # my_list.print_sorted()
