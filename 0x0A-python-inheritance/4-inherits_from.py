@@ -10,4 +10,6 @@ def inherits_from(obj, a_class):
         Returns: True or falsche
     """
     cls1 = type(obj)
-    return (isinstance(cls1, a_class))
+    if isinstance(obj, a_class) and type(obj) is not a_class:
+        return True
+    return False
