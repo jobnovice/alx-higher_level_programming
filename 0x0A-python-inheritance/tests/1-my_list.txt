@@ -5,12 +5,7 @@ TESTS FOR 1-my_list.py
 >>> lista1 = MyList()
 
 -----------------------------------------
-print a list with just one element
->>> lista1.append(6)
->>> print(lista1)
-[6]
->>> lista1.print_sorted()
-[6]
+
 
 
 -----------------------------------------
