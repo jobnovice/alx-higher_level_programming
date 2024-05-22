@@ -1,7 +1,11 @@
-# test for the sorted list program
+test for the sorted list program
+================================
 
 >>> from 1-my_list import MyList
->>> my_list = Mylist()
+>>> my_list = MyList()
+
+--------------------------------
+print a list that has both negative and postive integer
 >>> my_list.append(5)
 >>> my_list.append(2)
 >>> my_list.append(1)
@@ -10,5 +14,8 @@
 >>> my_list.append(-2)
 >>> print(my_list)
 [5, 2, 1, 3, 4, -2]
->>> my_list.sorted()
+>>> my_list.print_sorted()
 [-2, 1, 2, 3, 4, 5]
+
+------------------------------------------
+
