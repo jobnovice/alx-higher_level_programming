@@ -18,4 +18,29 @@ print a list that has both negative and postive integer
 [-2, 1, 2, 3, 4, 5]
 
 ------------------------------------------
+print a list that has one element and
+>>> mylist1 = MyList()
+>>> mylist1.append(1)
+>>> print(mylist1)
+[1]
+>>> mylist1.print_sorted()
+[1]
+
+------------------------------------------
+print a list that is just a regular list
+>>> mylist2 = MyList()
+>>> mylist2.append(2)
+>>> mylist2.append(3)
+>>> mylist2.append(5)
+>>> mylist2.append(6)
+>>> mylist2.append(7)
+>>> print(mylist2)
+[2, 3, 5 ,6, 7]
+>>>mylist2.print_sorted()
+[2, 3, 5 ,6, 7]
+
+
+---------------------------------------
+
+
 
