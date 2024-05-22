@@ -9,4 +9,4 @@ def inherits_from(obj, a_class):
            a_class: the class to be mapped to
         Returns: True or falsche
     """
-    return (isinstance(obj, a_class))
+    return (isinstance(type(obj), a_class))
