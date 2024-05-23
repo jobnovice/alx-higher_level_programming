@@ -1,0 +1,32 @@
+7-base_geometry.txt testing for the integer method and the area method
+==================================================
+
+>>> BaseGeometry = __import__('7-base_geometry.py').BaseGeometry
+>>> b1 = BaseGeometry()
+
+
+---------------------------------
+test for a negative number
+>>> b1.integer_validator("int", -1)
+Traceback (most recent call last):
+...
+ValueError: int must be greater than 0
+
+
+------------------------------------
+test for non integer
+>>> b1.integer_validator("int", "1")
+Traceback (most recent call last):
+...
+TypeError: int must be an integer
+
+
+-------------------------------------
+test for the area method
+>>> b1.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+
+------------------------------------
