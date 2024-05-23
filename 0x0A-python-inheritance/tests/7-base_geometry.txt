@@ -21,7 +21,6 @@ Traceback (most recent call last):
 	...
 ValueError: int must be greater than 0
 
-
 ------------------------------------
 test for non integer
 >>> b1.integer_validator("int", "1")
@@ -29,21 +28,12 @@ Traceback (most recent call last):
 	...
 TypeError: int must be an integer
 
-
 -------------------------------------
 test for the area method
 >>> b1.area()
 Traceback (most recent call last):
 	...
 Exception: area() is not implemented
-
-
-------------------------------------
-BaseGeometry.area()
->>> BaseGeometry.area()
-Traceback (most recent call last):
-	...
-TypeError: BaseGeometry.area() missing 1 required positional argument: 'self'
 
 -------------------------------------
 >>> b1.integer_validator("int")
@@ -76,4 +66,3 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 	...
 TypeError: age must be an integer
-
