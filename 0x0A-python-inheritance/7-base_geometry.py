@@ -20,3 +20,8 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
         return True
+
+# b1 = BaseGeometry()
+# BaseGeometry.area()
+
+# b1.integer_validator("int")
