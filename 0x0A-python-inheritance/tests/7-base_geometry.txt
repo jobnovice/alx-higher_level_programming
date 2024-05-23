@@ -8,7 +8,7 @@
 ---------------------------------
 test for the normal integer
 >>> b1.integer_validator("my_int", 12)
->>> bg.integer_validator("name", "John")
+>>> b1.integer_validator("name", "John")
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
