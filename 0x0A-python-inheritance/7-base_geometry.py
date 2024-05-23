@@ -22,6 +22,4 @@ class BaseGeometry:
 
 
 # b1 = BaseGeometry()
-# BaseGeometry.area()
-
-# b1.integer_validator("int")
+# b1.integer_validator("int", 0)

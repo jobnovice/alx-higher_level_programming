@@ -6,6 +6,18 @@
 
 
 ---------------------------------
+test for the normal integer
+>>> bg.integer_validator("my_int", 12)
+
+
+---------------------------------
+>>> b1.integer_validator("int", 0)
+Traceback (most recent call last):
+...
+ValueError: int must be greater than 0
+
+
+---------------------------------
 test for a negative number
 >>> b1.integer_validator("int", -1)
 Traceback (most recent call last):
