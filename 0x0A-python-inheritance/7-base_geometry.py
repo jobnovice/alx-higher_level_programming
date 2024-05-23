@@ -21,5 +21,5 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
-# b1 = BaseGeometry()
-# b1.integer_validator("int", 0)
+b1 = BaseGeometry()
+b1.integer_validator("age", [3])
