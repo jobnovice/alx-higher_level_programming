@@ -1,7 +1,7 @@
 7-base_geometry.txt testing for the integer method and the area method
 ==================================================
 
->>> BaseGeometry = __import__('7-base_geometry.py').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> b1 = BaseGeometry()
 
 
