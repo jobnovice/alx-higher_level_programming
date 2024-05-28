@@ -9,6 +9,10 @@ def write_file(filename="", text=""):
             text: string to write
         Returns: the number of charcters written
     """
-    with open(filename, 'w+x', encoding='utf-8') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         s = str(text)
         return (f.write(s))
+
+
+nb_characters = write_file("my_first_file2.txt", "This School is not so cool!\n")
+print(nb_characters)
