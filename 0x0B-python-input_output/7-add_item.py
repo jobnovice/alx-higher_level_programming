@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""serializing and deserailizing back and forth"""
 import sys
 import os
+
 
 # Import the helper functions
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
@@ -8,7 +10,8 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-# Load existing items from the file if it exists, otherwise start with an empty list
+# Load existing items from the file if it exists,
+# otherwise start with an empty list
 if os.path.exists(filename):
     items = load_from_json_file(filename)
 else:
