@@ -18,7 +18,7 @@ class Student():
         """
         dict1 = {}
         if attrs is not None:
-            if attrs and isinstance(attrs, list) and len(attrs) > 0:
+            if isinstance(attrs, list) and len(attrs) > 0:
                 for attr in attrs:
                     if hasattr(self, attr):
                         value = getattr(self, attr)
