@@ -17,7 +17,7 @@ class Student():
             returns: a json representaion of the object
         """
         dict1 = {}
-        if attrs and isinstance(attrs, list):
+        if attrs and isinstance(attrs, list) and attrs != []:
             for attr in attrs:
                 if hasattr(self, attr):
                     value = getattr(self, attr)
