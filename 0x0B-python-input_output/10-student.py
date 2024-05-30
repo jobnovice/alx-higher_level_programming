@@ -17,28 +17,16 @@ class Student():
             returns: a json representaion of the object
         """
         dict1 = {}
-        if attrs == []:
-            return {}
-        if attrs is not None:
-            if isinstance(attrs, list) and len(attrs) > 0:
-                for attr in attrs:
-                    if hasattr(self, attr):
-                        value = getattr(self, attr)
-                        dict1[attr] = value
-            else:
-                return {
-                    'first_name': self.first_name,
-                    'last_name': self.last_name,
-                    'age': self.age
-                    }
+        if attrs is not None and isinstance(attrs, list) and len(attrs) > 0:
+            for attr in attrs:
+                if hasattr(self, attr):
+                    value = getattr(self, attr)
+                    if isinstance(value, str):
+                        value = value.replace("'", "").replace('"', "")
+                    dict1[attr] = value
+        elif attrs == None:
+            return self.__dict__
 
-        
-        else:
-            return {
-                    'first_name': self.first_name,
-                    'last_name': self.last_name,
-                    'age': self.age
-                    }
         return dict1
 
 
