@@ -18,12 +18,14 @@ class Student:
             returns: a json representaion of the object
         """
         if attrs is not None:
-            res = {k: self.__dict__[k] for k  in self.__dict__.keys() & attrs}
+            res = {k: self.__dict__[k] for k in self.__dict__.keys() & attrs}
             return res
         else:
             return self.__dict__
-        
+
     def reload_json(self, json):
-        """reloading the json represenation to"""
-        for key,value in json.items():
-            setattr(self,key,value)
+        """reloading the json represenation to object
+            Args:
+                json: the dicitonary"""
+        for key, value in json.items():
+            setattr(self, key, value)
