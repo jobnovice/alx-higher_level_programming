@@ -28,5 +28,5 @@ class Student:
             Args:
                 json: the dicitonary"""
         for key, value in json.items():
-              if hasattr(self, key):
-                    setattr(self, key, value)
+            if hasattr(self, key):
+                setattr(self, key, value)
