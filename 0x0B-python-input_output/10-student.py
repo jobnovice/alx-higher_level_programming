@@ -17,6 +17,8 @@ class Student():
             returns: a json representaion of the object
         """
         dict1 = {}
+        if attrs == []:
+            return {}
         if attrs is not None:
             if isinstance(attrs, list) and len(attrs) > 0:
                 for attr in attrs:
@@ -30,6 +32,7 @@ class Student():
                     'age': self.age
                     }
 
+        
         else:
             return {
                     'first_name': self.first_name,
@@ -37,3 +40,17 @@ class Student():
                     'age': self.age
                     }
         return dict1
+
+
+student_1 = Student("John", "Doe", 23)
+student_2 = Student("Bob", "Dylan", 27)
+
+j_student_1 = student_1.to_json()
+j_student_2 = student_2.to_json(['first_name', 'age'])
+j_student_3 = student_2.to_json(['middle_name', 'age'])
+j_student_4 = student_1.to_json([])
+
+print(j_student_1)
+print(j_student_2)
+print(j_student_3)
+print(j_student_4)
