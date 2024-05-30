@@ -23,9 +23,10 @@ class Student:
         else:
             return self.__dict__
 
-    def reload_json(self, json):
+    def reload_from_json(self, json):
         """reloading the json represenation to object
             Args:
                 json: the dicitonary"""
         for key, value in json.items():
-            setattr(self, key, value)
+              if hasattr(self, key):
+                    setattr(self, key, value)
