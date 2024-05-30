@@ -24,7 +24,9 @@ class Student():
                     if isinstance(value, str):
                         value = value.replace("'", "").replace('"', "")
                     dict1[attr] = value
-        elif attrs == None:
+        elif attrs == []:
+            return {}
+        else:
             return self.__dict__
 
         return dict1
