@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Module that defines the Rectangle class, inheriting from the Base class."""
 
-Base = __import__('base').Base
+from base.py import Base
 
 
 # class Rectangle(Base):
