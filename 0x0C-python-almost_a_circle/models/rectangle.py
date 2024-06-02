@@ -4,8 +4,8 @@
 #from base import Base
 
 
-class Rectangle(Base):
-    """A rectangle that inherits from the base class Base."""
+# class Rectangle(Base):
+    # """A rectangle that inherits from the base class Base."""
 
 #     def __init__(self, width, height, x=0, y=0, id=None):
 #         """
