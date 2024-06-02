@@ -5,7 +5,7 @@ Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """A rectangle that inherits from the base class"""
+    """A rectangle that inherits from the base class Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super.__init__(id)
         self.x = x
@@ -34,7 +34,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        """sets the height of the rectangle"""
+        """sets the height of the rectangle
+        height: the height of the rectangle"""
         if height < 0:
             raise ValueError("height musst be greater than zero")
         if type(height) is not int:
