@@ -1,48 +1,119 @@
 #!/usr/bin/python3
-"""Rectangle class defined and inherits from the Base class"""
+"""
+Module that defines the Rectangle class, inheriting from the Base class.
+"""
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
-    """rectangle class defined as follows"""
+    """A rectangle that inherits from the base class Base."""
+
     def __init__(self, width, height, x=0, y=0, id=None):
-        """instantiates a new rectangle object as the following"""
+        """
+        Initialize a new Rectangle object.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int): The x coordinate. Defaults to 0.
+            y (int): The y coordinate. Defaults to 0.
+            id (int): The id of the object. Defaults to None.
+        """
         super().__init__(id)
+        self.width = width
+        self.height = height
         self.x = x
         self.y = y
 
     @property
     def width(self):
-        """returns the width of the rectangle"""
+        """Get the width of the rectangle."""
         return self.__width
 
     @width.setter
-    def width(self, width):
-        """sets the width of the rectangle
-            Args:
-                width: the width of the rectangle
+    def width(self, value):
         """
-        if type(width) is not int:
-            raise TypeError('width must be an integer')
-        if width <= 0:
-            raise ValueError('width muse be greater than zero')
+        Set the width of the rectangle.
 
-        self.__width = width
+        Args:
+            value (int): The width of the rectangle.
+
+        Raises:
+            ValueError: If width is less than or equal to zero.
+            TypeError: If width is not an integer.
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
     @property
     def height(self):
-        """getter for the height of the rectangle"""
+        """Get the height of the rectangle."""
         return self.__height
 
     @height.setter
-    def height(self, height):
-        """setter for the height of the rectangle
-            Args:
-                height: the height of the rectangle
+    def height(self, value):
         """
-        if type(height) is not int:
-            raise TypeError('height must be an integer')
-        if height <= 0:
-            raise ValueError('height must be greater than zero')
-        self.__height = height
+        Set the height of the rectangle.
+
+        Args:
+            value (int): The height of the rectangle.
+
+        Raises:
+            ValueError: If height is less than or equal to zero.
+            TypeError: If height is not an integer.
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    @property
+    def x(self):
+        """Get the x coordinate of the rectangle."""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """
+        Set the x coordinate of the rectangle.
+
+        Args:
+            value (int): The x coordinate of the rectangle.
+
+        Raises:
+            ValueError: If x is less than zero.
+            TypeError: If x is not an integer.
+        """
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @property
+    def y(self):
+        """Get the y coordinate of the rectangle."""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """
+        Set the y coordinate of the rectangle.
+
+        Args:
+            value (int): The y coordinate of the rectangle.
+
+        Raises:
+            ValueError: If y is less than zero.
+            TypeError: If y is not an integer.
+        """
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
