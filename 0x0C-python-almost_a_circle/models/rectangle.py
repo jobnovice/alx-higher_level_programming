@@ -7,14 +7,21 @@ Base = __import__('base').Base
 class Rectangle(Base):
     """A rectangle that inherits from the base class Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """instantiates a new Rectangle object"""
+        """instantiates a new Rectangle object
+            Args:
+                x: the x coordinate
+                y: the y coordinate
+                width: the width of the rectangle
+                height: the height of >>
+                id: the id of the object
+        """
         super.__init__(id)
         self.x = x
         self.y = y
 
     @property
     def width(self):
-        """returns the width of the rectangle"""
+        """returns the width of the rectangle if setted"""
         return self.__width
 
     @width.setter
@@ -30,7 +37,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """returns the height of the rectangle"""
+        """returns the height of the rectangle if setted"""
         return self.__height
 
     @height.setter
