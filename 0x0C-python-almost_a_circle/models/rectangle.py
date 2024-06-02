@@ -3,7 +3,7 @@
 Module that defines the Rectangle class, inheriting from the Base class.
 """
 
-from base import Base
+# from base import Base
 
 
 class Rectangle(Base):
@@ -12,17 +12,8 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Instantiates a new Rectangle object.
-
-        Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-            x (int): The x coordinate. Defaults to 0.
-            y (int): The y coordinate. Defaults to 0.
-            id (int): The id of the object. Defaults to None.
         """
         super().__init__(id)  # Corrected the call to super()
-        # self.width = width
-        # self.height = height
         self.x = x
         self.y = y
 
