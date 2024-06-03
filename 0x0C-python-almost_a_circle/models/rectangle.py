@@ -128,3 +128,9 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """returns the string representation of the object"""
+        return ("[{}] ({}) {}/{} - {}/{}").format(self.__class__.__name__,
+                                                  self.id, self.x, self.y,
+                                                  self.__width, self.__height)
