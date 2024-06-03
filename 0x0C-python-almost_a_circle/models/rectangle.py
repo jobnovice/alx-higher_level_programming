@@ -165,4 +165,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Returns the dictionary representation of the object"""
-        return self.__dict__
+        to_dict = {'id': 1, "width": 1, 'height': 1, 'x': 1, 'y': 1}
+        for key, val in self.__dict__.items():
+            if hasattr(to_dict, key):
+                setattr(to_dict, key, val)
+
+        return to_dict
