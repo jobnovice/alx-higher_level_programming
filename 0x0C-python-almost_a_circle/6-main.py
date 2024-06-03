@@ -11,3 +11,8 @@ if __name__ == "__main__":
 
     r2 = Rectangle(3, 2, 1, 0)
     r2.display()
+    
+    print("---")
+
+    r2 = Rectangle(5, 4, 4, 3)
+    r2.display()

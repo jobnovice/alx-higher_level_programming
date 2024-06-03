@@ -124,8 +124,10 @@ class Rectangle(Base):
 
     def display(self):
         """displys to the stdout the rectangle instance"""
+
+        {print() for x in range(self.y)}
         for i in range(self.__height):
-            {print(" ", end="") for x in range(max(self.x, self.y))}
+            {print(" ", end="") for x in range(self.x)}
             for j in range(self.__width):
                 print("#", end="")
             print()
