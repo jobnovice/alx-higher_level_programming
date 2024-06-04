@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """created the base class"""
+import csv
 import json
 import os
 
@@ -63,4 +64,37 @@ class Base:
                 tmp_dict = cls.from_json_string(tmp)
                 for i in tmp_dict:
                     list_obj.append(cls.create(**i))
+        return list_obj
+    
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save a list of objects to a file in CSV"""
+        csv_file = "{}.csv".format(cls.__name__)
+        if list_objs is None:
+            list_objs = []
+        csv_for = ([i.to_dictionary() for i in list_objs])
+
+        with open(csv_file, 'w', newline='')as csvfile:
+            if cls.__name__ == 'Rectangle':
+                fields = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == 'Square':
+                fields = ['id', 'size', 'x', 'y']
+            writer = csv.DictWriter(csvfile, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(csv_for)
+    
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserilizes the CSV file and returns a list objects involved"""
+        file_name = "{}.csv".format(cls.__name__)
+        list_obj = []
+        if not os.path.exists(file_name):
+            return []
+        else:
+            with open(file_name, 'r', newline='') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    for key, val in row.items():
+                        row[key] = int(val)
+                    list_obj.append(cls.create(**row))
         return list_obj
