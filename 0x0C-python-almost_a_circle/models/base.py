@@ -65,7 +65,7 @@ class Base:
                 for i in tmp_dict:
                     list_obj.append(cls.create(**i))
         return list_obj
-    
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Save a list of objects to a file in CSV"""
@@ -82,7 +82,7 @@ class Base:
             writer = csv.DictWriter(csvfile, fieldnames=fields)
             writer.writeheader()
             writer.writerows(csv_for)
-    
+
     @classmethod
     def load_from_file_csv(cls):
         """deserilizes the CSV file and returns a list objects involved"""
