@@ -42,6 +42,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """creates a new instance from the provided dictionary pointer"""
-        r_s = cls(1, 2)
-        r_s.update(**dictionary)
-        return r_s
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
