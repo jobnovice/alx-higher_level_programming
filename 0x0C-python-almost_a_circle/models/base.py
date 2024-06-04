@@ -38,3 +38,10 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creates a new instance from the provided dictionary pointer"""
+        r_s = cls(1, 2)
+        r_s.update(**dictionary)
+        return r_s
