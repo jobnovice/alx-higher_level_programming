@@ -31,3 +31,10 @@ class Base:
         dicts = cls.to_json_string([i.to_dictionary() for i in list_objs])
         with open(filename, 'w') as f:
             f.write(dicts)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """converts the json string to dicitonary"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
