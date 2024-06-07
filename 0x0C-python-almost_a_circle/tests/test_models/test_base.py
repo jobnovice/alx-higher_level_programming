@@ -4,7 +4,7 @@ import unittest
 from models.base import Base
 
 
-class TestForBase(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """Test for the base class"""
 
     def setUp(self):
