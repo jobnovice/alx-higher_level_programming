@@ -9,7 +9,7 @@ class TestBase(unittest.TestCase):
 
     def setUp(self):
         Base.__nb_objects = 0
-    
+
     def test_base(self):
         """test for the created instances"""
         b1 = Base()
