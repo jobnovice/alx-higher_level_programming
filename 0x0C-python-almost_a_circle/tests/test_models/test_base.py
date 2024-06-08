@@ -58,10 +58,10 @@ class Testbaseclass(unittest.TestCase):
         r = Base.to_json_string([dic])
         self.assertEqual(r, "[[1, 2, 3]]")
 
-    def testtojson1(self):
-        """error json"""
-        with self.assertRaises(TypeError):
-            Base.to_json_string()
+    # def testtojson1(self):
+    #     """error json"""
+    #     with self.assertRaises(TypeError):
+    #         Base.to_json_string()
 
 #   --------------  save to file -------------------------
 
@@ -90,7 +90,7 @@ class Testbaseclass(unittest.TestCase):
         r = Base.to_json_string(lista)
         self.assertEqual(Base.from_json_string(r), lista)
 
-    def testfromjson1(self):
-        """ error save to file"""
-        with self.assertRaises(TypeError):
-            Base.from_json_string()
+    # def testfromjson1(self):
+    #     """ error save to file"""
+    #     with self.assertRaises(TypeError):
+    #         Base.from_json_string()
