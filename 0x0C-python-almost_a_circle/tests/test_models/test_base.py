@@ -14,10 +14,10 @@ class Testbaseclass(unittest.TestCase):
     """ test for base"""
     def testcreateelems(self):
         b = Base()
-        b1 = Base(76)
-        b2 = Base()
         self.assertEqual(b.id, 1)
+        b1 = Base(76)
         self.assertEqual(b1.id, 76)
+        b2 = Base()
         self.assertEqual(b2.id, 2)
 
     # def testsetid(self):
