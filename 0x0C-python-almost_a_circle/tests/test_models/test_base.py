@@ -61,21 +61,21 @@ class Testbaseclass(unittest.TestCase):
 #         with self.assertRaises(TypeError):
 #             Base.to_json_string()
 
-# #   --------------  save to file -------------------------
+# #  --------------  save to file -------------------------
 
-#     def testsavetofile(self):
-#         """ test save to file"""
-#         Base.save_to_file([])
-#         with open("Base.json") as fd:
-#             self.assertEqual(fd.read(), "[]")
-#         Base.save_to_file(None)
-#         with open("Base.json") as fd:
-#             self.assertEqual(fd.read(), "[]")
+    def testsavetofile(self):
+       """ test save to file"""
+       Base.save_to_file([])
+       with open("Base.json") as fd:
+            self.assertEqual(fd.read(), "[]")
+       Base.save_to_file(None)
+       with open("Base.json") as fd:
+            self.assertEqual(fd.read(), "[]")
 
-#     def testsavetofile1(self):
-#         """ error save to file"""
-#         with self.assertRaises(AttributeError):
-#             Base.save_to_string()
+    def testsavetofile1(self):
+        """ error save to file"""
+        with self.assertRaises(AttributeError):
+            Base.save_to_string() 
 
 # #    ----------------- from json --------------------------
 
