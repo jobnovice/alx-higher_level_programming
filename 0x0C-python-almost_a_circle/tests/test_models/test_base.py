@@ -77,19 +77,19 @@ class Testbaseclass(unittest.TestCase):
 
 # #  --------------  save to file -------------------------
 
-    # def testsavetofile(self):
-    #    """ test save to file"""
-    #    Base.save_to_file([])
-    #    with open("Base.json") as fd:
-    #         self.assertEqual(fd.read(), "[]")
-    #    Base.save_to_file(None)
-    #    with open("Base.json") as fd:
-    #         self.assertEqual(fd.read(), "[]")
+    def testsavetofile(self):
+       """ test save to file"""
+       Base.save_to_file([])
+       with open("Base.json") as fd:
+            self.assertEqual(fd.read(), "[]")
+       Base.save_to_file(None)
+       with open("Base.json") as fd:
+            self.assertEqual(fd.read(), "[]")
 
-    # def testsavetofile1(self):
-    #     """ error save to file"""
-    #     with self.assertRaises(AttributeError):
-    #         Base.save_to_string() 
+    def testsavetofile1(self):
+        """ error save to file"""
+        with self.assertRaises(AttributeError):
+            Base.save_to_string() 
 
 # #    ----------------- from json --------------------------
 
@@ -102,7 +102,7 @@ class Testbaseclass(unittest.TestCase):
 #         r = Base.to_json_string(lista)
 #         self.assertEqual(Base.from_json_string(r), lista)
 
-#     def testfromjson1(self):
-#         """ error save to file"""
-#         with self.assertRaises(TypeError):
-#             Base.from_json_string()
+    def testfromjson1(self):
+        """ error save to file"""
+        with self.assertRaises(TypeError):
+            Base.from_json_string()
