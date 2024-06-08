@@ -33,13 +33,13 @@ class Testbaseclass(unittest.TestCase):
         self.assertEqual(Base.from_json_string("[]"), [])
         self.assertEqual(Base.from_json_string('[{ "id": 89 }]'), )
 
-# #     --------- private attribute of class --------
+#     --------- private attribute of class --------
 
-#     def testprivate(self):
-#         """ test for private attribute"""
-#         b = Base()
-#         with self.assertRaises(AttributeError):
-#             b.__nb_objects
+    def testprivate(self):
+        """ test for private attribute"""
+        b = Base()
+        with self.assertRaises(AttributeError):
+            b.__nb_objects
 
 # #    -------------- static method to_json_string -----------
 
