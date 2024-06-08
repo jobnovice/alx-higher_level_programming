@@ -81,16 +81,16 @@ class Testbaseclass(unittest.TestCase):
 
 # #    ----------------- from json --------------------------
 
-#     def testfromjson(self):
-#         """ test load from json"""
-#         self.assertEqual(Base.from_json_string("[]"), [])
-#         self.assertEqual(Base.from_json_string(None), [])
-#         self.assertEqual(Base.from_json_string(""), [])
-#         lista = [1, 2, 3]
-#         r = Base.to_json_string(lista)
-#         self.assertEqual(Base.from_json_string(r), lista)
+    def testfromjson(self):
+        """ test load from json"""
+        self.assertEqual(Base.from_json_string("[]"), [])
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(Base.from_json_string(""), [])
+        lista = [1, 2, 3]
+        r = Base.to_json_string(lista)
+        self.assertEqual(Base.from_json_string(r), lista)
 
-#     def testfromjson1(self):
-#         """ error save to file"""
-#         with self.assertRaises(TypeError):
-#             Base.from_json_string()
+    def testfromjson1(self):
+        """ error save to file"""
+        with self.assertRaises(TypeError):
+            Base.from_json_string()
