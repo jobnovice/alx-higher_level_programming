@@ -12,3 +12,5 @@ if __name__ == "__main__":
     print(type(dictionary))
     print(json_dictionary)
     print(type(json_dictionary))
+    my_json = Base.to_json_string([{'id': 12}])
+    print(my_json)

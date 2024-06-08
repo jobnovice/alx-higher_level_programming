@@ -20,20 +20,18 @@ class Testbaseclass(unittest.TestCase):
         self.assertEqual(b1.id, 76)
         self.assertEqual(b2.id, 2)
 
-    def testsetid(self):
-        """ test for set id"""
-        b = Base("h")
-        b1 = Base({1: 2})
-        b2 = Base((1, 4))
-        b3 = Base([3, 6])
-        b4 = Base(None)
-        b5 = Base(0)
-        self.assertEqual(b.id, "h")
-        self.assertEqual(b1.id, {1: 2})
-        self.assertEqual(b2.id, (1, 4))
-        self.assertEqual(b3.id, [3, 6])
-        self.assertEqual(b4.id, 4)
-        self.assertEqual(b5.id, 0)
+    def test_to_json(self):
+        """test the to_json_string method of the base class"""
+        self.assertEqual(Base.to_json_string(None), "[]")
+        self.assertEqual(Base.to_json_string([]), "[]")
+        self.assertEqual(Base.to_json_string([{'id': 12}]), [{"id": 12}])
+        self.assertEqual(Base.to_json_string())
+
+    def test_from_json(self):
+        """Test for the from_json method of the super class"""
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(Base.from_json_string("[]"), [])
+        self.assertEqual(Base.from_json_string('[{ "id": 89 }]'), )
 
 # #     --------- private attribute of class --------
 

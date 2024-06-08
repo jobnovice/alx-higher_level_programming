@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ 16-main """
 from models.rectangle import Rectangle
+from models.base import Base 
 
 if __name__ == "__main__":
 
@@ -13,3 +14,6 @@ if __name__ == "__main__":
     print("[{}] {}".format(type(list_input), list_input))
     print("[{}] {}".format(type(json_list_input), json_list_input))
     print("[{}] {}".format(type(list_output), list_output))
+
+    inpo = Base.from_json_string('[{ "id": 89 }]', [{'id': 89}])
+    print(inpo)
