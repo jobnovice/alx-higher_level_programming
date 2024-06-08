@@ -20,20 +20,6 @@ class Testbaseclass(unittest.TestCase):
         self.assertEqual(b1.id, 76)
         self.assertEqual(b2.id, 2)
 
-    def test_to_json(self):
-        """test the to_json_string method of the base class"""
-        self.assertEqual(Base.to_json_string(None), "[]")
-        self.assertEqual(Base.to_json_string([]), "[]")
-        self.assertEqual(Base.to_json_string([{'id': 12}]), [{"id": 12}])
-        self.assertEqual(Base.to_json_string())
-
-    def test_from_json(self):
-        """Test for the from_json method of the super class"""
-        self.assertEqual(Base.from_json_string(None), [])
-        self.assertEqual(Base.from_json_string("[]"), [])
-        self.assertEqual(Base.from_json_string('[{ "id": 89 }]'), )
-
-#     --------- private attribute of class --------
     def testsetid(self):
         """ test for set id"""
         b = Base("h")
@@ -48,14 +34,16 @@ class Testbaseclass(unittest.TestCase):
         self.assertEqual(b3.id, [3, 6])
         self.assertEqual(b4.id, 4)
         self.assertEqual(b5.id, 0)
-    
+
+#     --------- private attribute of class --------
+
     def testprivate(self):
         """ test for private attribute"""
         b = Base()
         with self.assertRaises(AttributeError):
             b.__nb_objects
 
-# #    -------------- static method to_json_string -----------
+#    -------------- static method to_json_string -----------
 
     def testtojson(self):
         """ test to json"""
@@ -75,23 +63,23 @@ class Testbaseclass(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.to_json_string()
 
-# #  --------------  save to file -------------------------
+#   --------------  save to file -------------------------
 
     def testsavetofile(self):
-       """ test save to file"""
-       Base.save_to_file([])
-       with open("Base.json") as fd:
+        """ test save to file"""
+        Base.save_to_file([])
+        with open("Base.json") as fd:
             self.assertEqual(fd.read(), "[]")
-       Base.save_to_file(None)
-       with open("Base.json") as fd:
+        Base.save_to_file(None)
+        with open("Base.json") as fd:
             self.assertEqual(fd.read(), "[]")
 
     def testsavetofile1(self):
         """ error save to file"""
         with self.assertRaises(AttributeError):
-            Base.save_to_string() 
+            Base.save_to_string()
 
-# #    ----------------- from json --------------------------
+#    ----------------- from json --------------------------
 
     def testfromjson(self):
         """ test load from json"""
@@ -106,4 +94,3 @@ class Testbaseclass(unittest.TestCase):
         """ error save to file"""
         with self.assertRaises(TypeError):
             Base.from_json_string()
- 
