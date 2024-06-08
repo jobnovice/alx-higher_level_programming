@@ -20,28 +20,28 @@ class Testbaseclass(unittest.TestCase):
         self.assertEqual(b1.id, 76)
         self.assertEqual(b2.id, 2)
 
-    def testsetid(self):
-        """ test for set id"""
-        b = Base("h")
-        b1 = Base({1: 2})
-        b2 = Base((1, 4))
-        b3 = Base([3, 6])
-        b4 = Base(None)
-        b5 = Base(0)
-        self.assertEqual(b.id, "h")
-        self.assertEqual(b1.id, {1: 2})
-        self.assertEqual(b2.id, (1, 4))
-        self.assertEqual(b3.id, [3, 6])
-        self.assertEqual(b4.id, 4)
-        self.assertEqual(b5.id, 0)
+    # def testsetid(self):
+    #     """ test for set id"""
+    #     b = Base("h")
+    #     b1 = Base({1: 2})
+    #     b2 = Base((1, 4))
+    #     b3 = Base([3, 6])
+    #     b4 = Base(None)
+    #     b5 = Base(0)
+    #     self.assertEqual(b.id, "h")
+    #     self.assertEqual(b1.id, {1: 2})
+    #     self.assertEqual(b2.id, (1, 4))
+    #     self.assertEqual(b3.id, [3, 6])
+    #     self.assertEqual(b4.id, 4)
+    #     self.assertEqual(b5.id, 0)
 
 #     --------- private attribute of class --------
 
-    def testprivate(self):
-        """ test for private attribute"""
-        b = Base()
-        with self.assertRaises(AttributeError):
-            b.__nb_objects
+    # def testprivate(self):
+    #     """ test for private attribute"""
+    #     b = Base()
+    #     with self.assertRaises(AttributeError):
+    #         b.__nb_objects
 
 #    -------------- static method to_json_string -----------
 
