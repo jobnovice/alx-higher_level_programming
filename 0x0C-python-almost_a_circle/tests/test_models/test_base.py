@@ -106,3 +106,4 @@ class Testbaseclass(unittest.TestCase):
         """ error save to file"""
         with self.assertRaises(TypeError):
             Base.from_json_string()
+ 
